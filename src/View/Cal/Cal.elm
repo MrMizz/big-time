@@ -1,8 +1,9 @@
-module View.About.About exposing (view)
+module View.Cal.Cal exposing (view)
 
 import Html exposing (Html)
 import Html.Attributes exposing (class)
 import Msg.Msg exposing (Msg)
+import View.Cal.Month
 import View.Hero
 
 
@@ -16,9 +17,5 @@ body =
     Html.div
         [ class "container"
         ]
-        [ Html.div
-            [ class "has-text-centered"
-            ]
-            [ Html.text "About . . . "
-            ]
+        [ View.Cal.Month.view
         ]

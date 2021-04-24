@@ -8,16 +8,16 @@ import Url.Parser as UrlParser
 
 type State
     = LandingPage
-    | About
+    | Cal
     | Error String
 
 
 urlParser : UrlParser.Parser (State -> c) c
 urlParser =
     UrlParser.oneOf
-        [ UrlParser.map LandingPage UrlParser.top
+        [ UrlParser.map Cal UrlParser.top
         , UrlParser.map LandingPage (UrlParser.s "welcome")
-        , UrlParser.map About (UrlParser.s "about")
+        , UrlParser.map Cal (UrlParser.s "cal")
         ]
 
 
@@ -44,8 +44,8 @@ path state =
         LandingPage ->
             "#/welcome"
 
-        About ->
-            "#/about"
+        Cal ->
+            "#/cal"
 
         Error _ ->
             "#/invalid"

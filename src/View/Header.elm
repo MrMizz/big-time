@@ -25,7 +25,7 @@ view =
                         [ Html.li
                             []
                             [ Html.a
-                                [ State.href About
+                                [ State.href Cal
                                 ]
                                 [ Html.text "About"
                                 ]

@@ -9,7 +9,7 @@ import Model.State as State exposing (State(..))
 import Msg.Msg exposing (Msg(..), resetViewport)
 import Sub.Sub as Sub
 import Url
-import View.About.About
+import View.Cal.Cal
 import View.Error.Error
 import View.LandingPage.LandingPage
 
@@ -65,8 +65,8 @@ view model =
                 LandingPage ->
                     View.LandingPage.LandingPage.view
 
-                About ->
-                    View.About.About.view
+                Cal ->
+                    View.Cal.Cal.view
 
                 Error error ->
                     View.Error.Error.view error
