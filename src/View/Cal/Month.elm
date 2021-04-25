@@ -1,45 +1,19 @@
 module View.Cal.Month exposing (view)
 
 import Html exposing (Html)
-import Html.Attributes exposing (class)
+import Model.Month exposing (Month)
 import Msg.Msg exposing (Msg)
+import View.Cal.Week
 
-view: Html Msg
-view =
-    body
 
-body : Html Msg
-body =
+view : Month -> Html Msg
+view month =
     Html.div
         []
-        [ week
-        , week
-        , week
-        , week
-        ]
-
-week: Html Msg
-week =
-    Html.div
-        [ class "columns is-centered is-mobile"
-        ]
-        [ day
-        , day
-        , day
-        , day
-        , day
-        , day
-        , day
-        ]
-
-day: Html Msg
-day =
-    Html.div
-        [ class "column"
-        ]
-        [ Html.div
-            [ class "has-text-centered has-border-2 my-6"
-            ]
-            [ Html.text "Day"
-            ]
+        [ View.Cal.Week.view month.first
+        , View.Cal.Week.view month.second
+        , View.Cal.Week.view month.third
+        , View.Cal.Week.view month.fourth
+        , View.Cal.Week.view month.fifth
+        , View.Cal.Week.view month.sixth
         ]

@@ -2,6 +2,8 @@ module Model.Day exposing (Day)
 
 import Model.Moment exposing (Moment)
 
+
 type alias Day =
-    { moments : List Moment
+    { ofMonth : Int
+    , moments : List Moment
     }

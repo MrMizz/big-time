@@ -1,8 +1,13 @@
 module Model.Month exposing (Month)
 
-import Model.Day exposing (Day)
+import Model.Week exposing (Week)
+
 
 type alias Month =
-    { n: Int
-    , days: List Day
+    { first : Week
+    , second : Week
+    , third : Week
+    , fourth : Week
+    , fifth : Week
+    , sixth : Week
     }

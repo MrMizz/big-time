@@ -1,5 +1,6 @@
 module View.Cal.Cal exposing (view)
 
+import Data.Cal.TwentyOne.May.May
 import Html exposing (Html)
 import Html.Attributes exposing (class)
 import Msg.Msg exposing (Msg)
@@ -17,5 +18,5 @@ body =
     Html.div
         [ class "container"
         ]
-        [ View.Cal.Month.view
+        [ View.Cal.Month.view Data.Cal.TwentyOne.May.May.month
         ]
