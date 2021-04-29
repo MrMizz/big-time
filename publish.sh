@@ -2,7 +2,11 @@
 
 BUCKET=s3://bigtimetapin.com
 
-echo "Building New Assets..."
+echo "Building Sass Assets"
+cd assets && (npm run build)
+cd ..
+
+echo "Building Elm Assets..."
 ./build.sh
 
 echo "Publishing New Assets..."
