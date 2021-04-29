@@ -10,34 +10,33 @@ import View.Cal.Moment
 
 view : ( Maybe Day, DayOfWeek ) -> Html Msg
 view ( maybeDay, dayOfWeek ) =
-    let
-        day =
-            case maybeDay of
-                Just d ->
+    case maybeDay of
+        Just d ->
+            let
+                day =
                     Html.div
                         [ style "font-size" "0.60em"
                         ]
                         [ Html.text (String.fromInt d.ofMonth ++ " " ++ DayOfWeek.toString dayOfWeek)
                         ]
 
-                Nothing ->
-                    Html.div [] []
-
-        moment =
-            case maybeDay of
-                Just d ->
+                moment =
                     case d.moments of
                         head :: _ ->
                             View.Cal.Moment.view head
+
                         _ ->
                             Html.div [] []
+            in
+            Html.a
+                [ class "column has-border-2 mx-1 my-1"
+                ]
+                [ day
+                , moment
+                ]
 
-                Nothing ->
-                    Html.div [] []
-    in
-    Html.a
-        [ class "column has-border-2 mx-1 my-1"
-        ]
-        [ day
-        , moment
-        ]
+        Nothing ->
+            Html.div
+                [ class "column mx-1 my-1"
+                ]
+                []

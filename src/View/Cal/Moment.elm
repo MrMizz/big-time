@@ -5,6 +5,7 @@ import Html.Attributes exposing (class, src)
 import Model.Moment exposing (Moment)
 import Msg.Msg exposing (Msg)
 
+
 view : Moment -> Html Msg
 view moment =
     Html.div
