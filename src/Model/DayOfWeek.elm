@@ -15,7 +15,7 @@ toString : DayOfWeek -> String
 toString dayOfWeek =
     case dayOfWeek of
         Sunday ->
-            "Sun"
+            "Su"
 
         Monday ->
             "M"
@@ -33,4 +33,4 @@ toString dayOfWeek =
             "F"
 
         Saturday ->
-            "Sat"
+            "Sa"
