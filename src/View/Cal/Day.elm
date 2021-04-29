@@ -1,7 +1,7 @@
 module View.Cal.Day exposing (view)
 
 import Html exposing (Attribute, Html)
-import Html.Attributes exposing (class, style)
+import Html.Attributes exposing (class)
 import Model.Day exposing (Day)
 import Model.DayOfWeek as DayOfWeek exposing (DayOfWeek)
 import Msg.Msg exposing (Msg)
@@ -15,7 +15,7 @@ view ( maybeDay, dayOfWeek ) =
             let
                 day =
                     Html.div
-                        [ style "font-size" "0.60em"
+                        [ class "day-cell"
                         ]
                         [ Html.text (String.fromInt d.ofMonth ++ " " ++ DayOfWeek.toString dayOfWeek)
                         ]
