@@ -27,7 +27,7 @@ view =
                             [ Html.a
                                 [ State.href About
                                 ]
-                                [ Html.text "About"
+                                [ Html.text "about"
                                 ]
                             ]
                         , Html.li
@@ -35,7 +35,7 @@ view =
                             [ Html.a
                                 [ State.href Cal
                                 ]
-                                [ Html.text "Blog"
+                                [ Html.text "blog"
                                 ]
                             ]
                         ]

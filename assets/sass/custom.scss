@@ -67,7 +67,7 @@ $family-secondary: "Anton", BlinkMacSystemFont, -apple-system, "Helvetica", "Ari
 
 .day-cell {
   @include until($tablet) {
-    font-size: 0.25rem;
+    font-size: 0.28rem;
   }
   @include from($tablet) {
     font-size: 0.75rem;
