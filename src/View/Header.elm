@@ -18,14 +18,14 @@ view =
                 [ class "level-item"
                 ]
                 [ Html.div
-                    [ class "tabs is-boxed is-large has-border-1"
+                    [ class "tabs is-boxed is-medium has-border-1"
                     ]
                     [ Html.ul
                         []
                         [ Html.li
                             []
                             [ Html.a
-                                [ State.href Cal
+                                [ State.href About
                                 ]
                                 [ Html.text "About"
                                 ]
@@ -33,25 +33,12 @@ view =
                         , Html.li
                             []
                             [ Html.a
-                                [ State.href LandingPage
+                                [ State.href Cal
                                 ]
-                                [ Html.text "Landing"
+                                [ Html.text "Blog"
                                 ]
                             ]
                         ]
-                    ]
-                ]
-            ]
-        , Html.div
-            [ class "level-right"
-            ]
-            [ Html.div
-                [ class "level-item"
-                ]
-                [ Html.div
-                    [ class "title is-family-secondary is-3 px-2 pb-2"
-                    ]
-                    [ Html.text "Responsive Elm"
                     ]
                 ]
             ]

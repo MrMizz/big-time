@@ -9,9 +9,9 @@ import Model.State as State exposing (State(..))
 import Msg.Msg exposing (Msg(..), resetViewport)
 import Sub.Sub as Sub
 import Url
+import View.About.About
 import View.Cal.Cal
 import View.Error.Error
-import View.LandingPage.LandingPage
 
 
 main : Program () Model Msg
@@ -62,8 +62,8 @@ view model =
     let
         html =
             case model.state of
-                LandingPage ->
-                    View.LandingPage.LandingPage.view
+                About ->
+                    View.About.About.view
 
                 Cal ->
                     View.Cal.Cal.view

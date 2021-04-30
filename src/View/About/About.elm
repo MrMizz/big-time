@@ -1,4 +1,4 @@
-module View.LandingPage.LandingPage exposing (view)
+module View.About.About exposing (view)
 
 import Html exposing (Html)
 import Html.Attributes exposing (class)
