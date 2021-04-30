@@ -25,7 +25,7 @@ view =
 body: Html Msg
 body =
     Html.nav
-        [ class "is-size-6"
+        [ class "is-size-6 is-pulled-right"
         ]
         [ Html.div
             []
@@ -35,10 +35,9 @@ body =
                 , target "_blank"
                 ]
                 [ Html.i
-                    [ class "far fa-envelope has-text-info"
+                    [ class "far fa-envelope"
                     ]
-                    [ Html.text "email"
-                    ]
+                    []
                 ]
             ]
         , Html.div
@@ -50,10 +49,9 @@ body =
                 , target "_blank"
                 ]
                 [ Html.i
-                    [ class "far fa-at has-text-info"
+                    [ class "fab fa-instagram"
                     ]
-                    [ Html.text "insta"
-                    ]
+                    []
                 ]
             ]
         ]
