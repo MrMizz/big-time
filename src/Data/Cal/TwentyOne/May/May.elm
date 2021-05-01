@@ -7,7 +7,8 @@ import Model.Week
 
 month : Month
 month =
-    { first =
+    { name = "may two zero two one"
+    , first =
         { sunday =
             Nothing
         , monday =

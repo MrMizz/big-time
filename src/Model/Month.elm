@@ -4,7 +4,8 @@ import Model.Week exposing (Week)
 
 
 type alias Month =
-    { first : Week
+    { name: String
+    , first : Week
     , second : Week
     , third : Week
     , fourth : Week
