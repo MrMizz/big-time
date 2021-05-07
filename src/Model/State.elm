@@ -2,23 +2,34 @@ module Model.State exposing (State(..), href, parse)
 
 import Html
 import Html.Attributes
+import Model.MonthOfYear as MonthOfYear exposing (MonthOfYear)
+import Model.Year as Year exposing (Year)
 import Url
-import Url.Parser as UrlParser
+import Url.Parser as UrlParser exposing (..)
 
 
 type State
     = About
-    | Cal
+    | Cal Year MonthOfYear
     | Error String
 
 
 urlParser : UrlParser.Parser (State -> c) c
 urlParser =
     UrlParser.oneOf
-        [ UrlParser.map Cal UrlParser.top
+        [ UrlParser.map (Cal Year.init MonthOfYear.init) UrlParser.top
         , UrlParser.map About (UrlParser.s "about")
-        , UrlParser.map Cal (UrlParser.s "blog")
+        , UrlParser.map (Cal Year.init MonthOfYear.init) (UrlParser.s "blog")
+        , UrlParser.map Cal (yearParser </> monthParser)
         ]
+
+yearParser : UrlParser.Parser (Year -> b) b
+yearParser =
+    UrlParser.custom "YEAR" Year.fromString
+
+monthParser : UrlParser.Parser (MonthOfYear -> b) b
+monthParser =
+    UrlParser.custom "MONTH" MonthOfYear.fromString
 
 
 parse : Url.Url -> State
@@ -44,8 +55,8 @@ path state =
         About ->
             "#/about"
 
-        Cal ->
-            "#/blog"
+        Cal year moy ->
+            "#/" ++ (Year.toString year) ++ "/" ++ (MonthOfYear.toString moy)
 
         Error _ ->
             "#/invalid"

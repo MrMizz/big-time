@@ -2,7 +2,9 @@ module View.Header exposing (view)
 
 import Html exposing (Html)
 import Html.Attributes exposing (class)
+import Model.MonthOfYear as MonthOfYear
 import Model.State as State exposing (State(..))
+import Model.Year as Year
 import Msg.Msg exposing (Msg)
 
 
@@ -33,7 +35,7 @@ view =
                         , Html.li
                             []
                             [ Html.a
-                                [ State.href Cal
+                                [ State.href (Cal Year.init MonthOfYear.init)
                                 ]
                                 [ Html.text "blog"
                                 ]

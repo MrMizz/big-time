@@ -13,8 +13,8 @@ view =
         [ Html.div
             [ class "content has-text-centered"
             ]
-            [ Html.h1
-                [ class "title is-4"
+            [ Html.h3
+                [ class "subtitle is-5"
                 ]
                 [ Html.text "contact"
                 ]

@@ -1,14 +1,23 @@
-module Model.Month exposing (Month)
+module Model.Month exposing (Month, empty)
 
-import Model.Week exposing (Week)
+import Model.Week as Week exposing (Week)
 
 
 type alias Month =
-    { name: String
-    , first : Week
+    { first : Week
     , second : Week
     , third : Week
     , fourth : Week
     , fifth : Week
     , sixth : Week
     }
+
+empty: Month
+empty =
+    Month
+        Week.empty
+        Week.empty
+        Week.empty
+        Week.empty
+        Week.empty
+        Week.empty

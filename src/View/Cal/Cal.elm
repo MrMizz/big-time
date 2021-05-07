@@ -1,22 +1,56 @@
 module View.Cal.Cal exposing (view)
 
-import Data.Cal.TwentyOne.May.May
 import Html exposing (Html)
 import Html.Attributes exposing (class)
+import Model.Month as Month exposing (Month)
+import Model.MonthOfYear as MonthOfYear exposing (MonthOfYear)
+import Model.Year as Year exposing (Year)
 import Msg.Msg exposing (Msg)
 import View.Cal.Month
 import View.Hero
 
 
-view : Html Msg
-view =
-    View.Hero.view body
+view : (Year, MonthOfYear) -> Html Msg
+view (year, moy) =
+    View.Hero.view (body (year, moy))
 
 
-body : Html Msg
-body =
+body : (Year, MonthOfYear) -> Html Msg
+body (year, moy) =
+    let
+        maybeMonth : Maybe Month
+        maybeMonth =
+            Year.data (year, moy)
+
+        view_ : Html Msg
+        view_ =
+            case maybeMonth of
+                Just month ->
+                    Html.div
+                        []
+                        [ header (year, moy)
+                        , View.Cal.Month.view month
+                        ]
+
+                Nothing ->
+                    Html.div
+                        [ class "void-img"
+                        ]
+                        [ header (year, moy)
+                        , View.Cal.Month.view Month.empty
+                        ]
+
+    in
     Html.div
         [ class "container"
         ]
-        [ View.Cal.Month.view Data.Cal.TwentyOne.May.May.month
+        [ view_
+        ]
+
+header: (Year, MonthOfYear) -> Html Msg
+header (year, moy) =
+    Html.h2
+        [ class "subtitle is-6"
+        ]
+        [ Html.text (Year.toString year ++ " " ++ MonthOfYear.toString moy)
         ]

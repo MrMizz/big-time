@@ -65,13 +65,13 @@ view model =
                 About ->
                     View.About.About.view
 
-                Cal ->
-                    View.Cal.Cal.view
+                Cal year moy ->
+                    View.Cal.Cal.view (year, moy)
 
                 Error error ->
                     View.Error.Error.view error
     in
-    { title = "Responsive Elm"
+    { title = "the.tap.in"
     , body =
         [ html
         ]
