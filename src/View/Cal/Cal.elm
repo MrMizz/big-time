@@ -10,17 +10,17 @@ import View.Cal.Month
 import View.Hero
 
 
-view : (Year, MonthOfYear) -> Html Msg
-view (year, moy) =
-    View.Hero.view (body (year, moy))
+view : ( Year, MonthOfYear ) -> Html Msg
+view ( year, moy ) =
+    View.Hero.view (body ( year, moy ))
 
 
-body : (Year, MonthOfYear) -> Html Msg
-body (year, moy) =
+body : ( Year, MonthOfYear ) -> Html Msg
+body ( year, moy ) =
     let
         maybeMonth : Maybe Month
         maybeMonth =
-            Year.data (year, moy)
+            Year.data ( year, moy )
 
         view_ : Html Msg
         view_ =
@@ -28,7 +28,7 @@ body (year, moy) =
                 Just month ->
                     Html.div
                         []
-                        [ header (year, moy)
+                        [ header ( year, moy )
                         , View.Cal.Month.view month
                         ]
 
@@ -36,10 +36,9 @@ body (year, moy) =
                     Html.div
                         [ class "void-img"
                         ]
-                        [ header (year, moy)
+                        [ header ( year, moy )
                         , View.Cal.Month.view Month.empty
                         ]
-
     in
     Html.div
         [ class "container"
@@ -47,8 +46,9 @@ body (year, moy) =
         [ view_
         ]
 
-header: (Year, MonthOfYear) -> Html Msg
-header (year, moy) =
+
+header : ( Year, MonthOfYear ) -> Html Msg
+header ( year, moy ) =
     Html.h2
         [ class "subtitle is-6"
         ]

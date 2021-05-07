@@ -12,7 +12,8 @@ type alias Month =
     , sixth : Week
     }
 
-empty: Month
+
+empty : Month
 empty =
     Month
         Week.empty

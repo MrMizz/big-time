@@ -22,7 +22,8 @@ view =
             ]
         ]
 
-body: Html Msg
+
+body : Html Msg
 body =
     Html.nav
         [ class "is-size-6 is-pulled-right"

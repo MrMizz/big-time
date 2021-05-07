@@ -66,7 +66,7 @@ view model =
                     View.About.About.view
 
                 Cal year moy ->
-                    View.Cal.Cal.view (year, moy)
+                    View.Cal.Cal.view ( year, moy )
 
                 Error error ->
                     View.Error.Error.view error

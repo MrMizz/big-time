@@ -1,18 +1,21 @@
-module Model.Year exposing (Year(..), data, next, previous, toString, fromString, init)
+module Model.Year exposing (Year(..), data, fromString, init, next, previous, toString)
 
 import Data.Cal.TwentyOne.May.May
 import Model.Month exposing (Month)
 import Model.MonthOfYear exposing (MonthOfYear(..))
 
+
 type Year
     = TwentyOne
     | TwentyTwo
 
-init: Year
+
+init : Year
 init =
     TwentyOne
 
-toString: Year -> String
+
+toString : Year -> String
 toString year =
     case year of
         TwentyOne ->
@@ -21,7 +24,8 @@ toString year =
         TwentyTwo ->
             "2022"
 
-fromString: String -> Maybe Year
+
+fromString : String -> Maybe Year
 fromString str =
     case str of
         "2021" ->
@@ -33,7 +37,8 @@ fromString str =
         _ ->
             Nothing
 
-next: Year -> Maybe Year
+
+next : Year -> Maybe Year
 next year =
     case year of
         TwentyOne ->
@@ -42,7 +47,8 @@ next year =
         TwentyTwo ->
             Nothing
 
-previous: Year -> Maybe Year
+
+previous : Year -> Maybe Year
 previous year =
     case year of
         TwentyOne ->
@@ -51,13 +57,15 @@ previous year =
         TwentyTwo ->
             Just TwentyOne
 
-data : (Year, MonthOfYear) -> Maybe Month
-data (year, moy) =
+
+data : ( Year, MonthOfYear ) -> Maybe Month
+data ( year, moy ) =
     case year of
         TwentyOne ->
             case moy of
                 May ->
                     Just Data.Cal.TwentyOne.May.May.month
+
                 _ ->
                     Nothing
 

@@ -1,4 +1,5 @@
-module Model.MonthOfYear exposing (MonthOfYear(..), toString, init, fromString)
+module Model.MonthOfYear exposing (MonthOfYear(..), fromString, init, toString)
+
 
 type MonthOfYear
     = Jan
@@ -14,11 +15,13 @@ type MonthOfYear
     | Nov
     | Dec
 
-init: MonthOfYear
+
+init : MonthOfYear
 init =
     May
 
-fromString: String -> Maybe MonthOfYear
+
+fromString : String -> Maybe MonthOfYear
 fromString str =
     case str of
         "01" ->
@@ -60,7 +63,8 @@ fromString str =
         _ ->
             Nothing
 
-toString: MonthOfYear -> String
+
+toString : MonthOfYear -> String
 toString moy =
     case moy of
         Jan ->

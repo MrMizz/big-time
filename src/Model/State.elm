@@ -23,9 +23,11 @@ urlParser =
         , UrlParser.map Cal (yearParser </> monthParser)
         ]
 
+
 yearParser : UrlParser.Parser (Year -> b) b
 yearParser =
     UrlParser.custom "YEAR" Year.fromString
+
 
 monthParser : UrlParser.Parser (MonthOfYear -> b) b
 monthParser =
@@ -56,7 +58,7 @@ path state =
             "#/about"
 
         Cal year moy ->
-            "#/" ++ (Year.toString year) ++ "/" ++ (MonthOfYear.toString moy)
+            "#/" ++ Year.toString year ++ "/" ++ MonthOfYear.toString moy
 
         Error _ ->
             "#/invalid"
