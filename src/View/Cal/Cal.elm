@@ -34,10 +34,13 @@ body ( year, moy ) =
 
                 Nothing ->
                     Html.div
-                        [ class "void-img"
-                        ]
+                        []
                         [ header ( year, moy )
-                        , View.Cal.Month.view Month.empty
+                        , Html.div
+                            [ class "void-img"
+                            ]
+                            [ View.Cal.Month.view Month.empty
+                            ]
                         ]
     in
     Html.div
@@ -50,7 +53,7 @@ body ( year, moy ) =
 header : ( Year, MonthOfYear ) -> Html Msg
 header ( year, moy ) =
     Html.h2
-        [ class "subtitle is-6"
+        [ class "subtitle is-6 has-text-centered"
         ]
         [ Html.text (Year.toString year ++ " " ++ MonthOfYear.toString moy)
         ]
