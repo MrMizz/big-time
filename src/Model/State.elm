@@ -2,6 +2,7 @@ module Model.State exposing (State(..), href, parse)
 
 import Html
 import Html.Attributes
+import Model.Day as Day
 import Model.MonthOfYear as MonthOfYear exposing (MonthOfYear)
 import Model.Year as Year exposing (Year)
 import Url
@@ -11,6 +12,7 @@ import Url.Parser as UrlParser exposing (..)
 type State
     = About
     | Cal Year MonthOfYear
+    | Day Year MonthOfYear Int
     | Error String
 
 
@@ -18,9 +20,10 @@ urlParser : UrlParser.Parser (State -> c) c
 urlParser =
     UrlParser.oneOf
         [ UrlParser.map (Cal Year.init MonthOfYear.init) UrlParser.top
-        , UrlParser.map About (UrlParser.s "about")
         , UrlParser.map (Cal Year.init MonthOfYear.init) (UrlParser.s "blog")
         , UrlParser.map Cal (yearParser </> monthParser)
+        , UrlParser.map Day (yearParser </> monthParser </> UrlParser.int)
+        , UrlParser.map About (UrlParser.s "about")
         ]
 
 
@@ -32,7 +35,6 @@ yearParser =
 monthParser : UrlParser.Parser (MonthOfYear -> b) b
 monthParser =
     UrlParser.custom "MONTH" MonthOfYear.fromString
-
 
 parse : Url.Url -> State
 parse url =
@@ -59,6 +61,9 @@ path state =
 
         Cal year moy ->
             "#/" ++ Year.toString year ++ "/" ++ MonthOfYear.toString moy
+
+        Day year moy day ->
+            "#/" ++ Year.toString year ++ "/" ++ MonthOfYear.toString moy ++ "/" ++ Day.print day
 
         Error _ ->
             "#/invalid"

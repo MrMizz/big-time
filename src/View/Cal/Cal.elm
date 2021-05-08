@@ -1,4 +1,4 @@
-module View.Cal.Cal exposing (view)
+module View.Cal.Cal exposing (view, void)
 
 import Html exposing (Html)
 import Html.Attributes exposing (class)
@@ -10,43 +10,32 @@ import View.Cal.Month
 import View.Hero
 
 
-view : ( Year, MonthOfYear ) -> Html Msg
-view ( year, moy ) =
-    View.Hero.view (body ( year, moy ))
+view : ( Year, MonthOfYear, Month ) -> Html Msg
+view ( year, moy, month ) =
+    View.Hero.view (body ( year, moy, month))
 
+void : (Year, MonthOfYear) ->  Html Msg
+void (year, moy) =
+    Html.div
+        []
+        [ header ( year, moy )
+        , Html.div
+            [ class "void-img"
+            ]
+            [ View.Cal.Month.view (year, moy) Month.empty
+            ]
+        ]
 
-body : ( Year, MonthOfYear ) -> Html Msg
-body ( year, moy ) =
-    let
-        maybeMonth : Maybe Month
-        maybeMonth =
-            Year.data ( year, moy )
-
-        view_ : Html Msg
-        view_ =
-            case maybeMonth of
-                Just month ->
-                    Html.div
-                        []
-                        [ header ( year, moy )
-                        , View.Cal.Month.view month
-                        ]
-
-                Nothing ->
-                    Html.div
-                        []
-                        [ header ( year, moy )
-                        , Html.div
-                            [ class "void-img"
-                            ]
-                            [ View.Cal.Month.view Month.empty
-                            ]
-                        ]
-    in
+body : ( Year, MonthOfYear, Month ) -> Html Msg
+body ( year, moy, month ) =
     Html.div
         [ class "container"
         ]
-        [ view_
+        [ Html.div
+            []
+            [ header ( year, moy )
+            , View.Cal.Month.view (year, moy) month
+            ]
         ]
 
 

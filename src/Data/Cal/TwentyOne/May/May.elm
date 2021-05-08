@@ -23,172 +23,172 @@ month =
         , saturday =
             Just
                 { ofMonth = 1
-                , moments =
-                    [ { url = "images/IMG_2992.jpg"
-                      , description = ""
-                      , categories = [ Food ]
-                      }
-                    ]
+                , moment =
+                    Just
+                        { url = "images/IMG_2992.jpg"
+                        , description = ""
+                        , categories = [ Food ]
+                        }
                 }
         }
     , second =
         { sunday =
             Just
                 { ofMonth = 2
-                , moments = []
+                , moment = Nothing
                 }
         , monday =
             Just
                 { ofMonth = 3
-                , moments = []
+                , moment = Nothing
                 }
         , tuesday =
             Just
                 { ofMonth = 4
-                , moments = []
+                , moment = Nothing
                 }
         , wednesday =
             Just
                 { ofMonth = 5
-                , moments = []
+                , moment = Nothing
                 }
         , thursday =
             Just
                 { ofMonth = 6
-                , moments = []
+                , moment = Nothing
                 }
         , friday =
             Just
                 { ofMonth = 7
-                , moments = []
+                , moment = Nothing
                 }
         , saturday =
             Just
                 { ofMonth = 8
-                , moments = []
+                , moment = Nothing
                 }
         }
     , third =
         { sunday =
             Just
                 { ofMonth = 9
-                , moments = []
+                , moment = Nothing
                 }
         , monday =
             Just
                 { ofMonth = 10
-                , moments = []
+                , moment = Nothing
                 }
         , tuesday =
             Just
                 { ofMonth = 11
-                , moments = []
+                , moment = Nothing
                 }
         , wednesday =
             Just
                 { ofMonth = 12
-                , moments = []
+                , moment = Nothing
                 }
         , thursday =
             Just
                 { ofMonth = 13
-                , moments = []
+                , moment = Nothing
                 }
         , friday =
             Just
                 { ofMonth = 14
-                , moments = []
+                , moment = Nothing
                 }
         , saturday =
             Just
                 { ofMonth = 15
-                , moments = []
+                , moment = Nothing
                 }
         }
     , fourth =
         { sunday =
             Just
                 { ofMonth = 16
-                , moments = []
+                , moment = Nothing
                 }
         , monday =
             Just
                 { ofMonth = 17
-                , moments = []
+                , moment = Nothing
                 }
         , tuesday =
             Just
                 { ofMonth = 18
-                , moments = []
+                , moment = Nothing
                 }
         , wednesday =
             Just
                 { ofMonth = 19
-                , moments = []
+                , moment = Nothing
                 }
         , thursday =
             Just
                 { ofMonth = 20
-                , moments = []
+                , moment = Nothing
                 }
         , friday =
             Just
                 { ofMonth = 21
-                , moments = []
+                , moment = Nothing
                 }
         , saturday =
             Just
                 { ofMonth = 22
-                , moments = []
+                , moment = Nothing
                 }
         }
     , fifth =
         { sunday =
             Just
                 { ofMonth = 23
-                , moments = []
+                , moment = Nothing
                 }
         , monday =
             Just
                 { ofMonth = 24
-                , moments = []
+                , moment = Nothing
                 }
         , tuesday =
             Just
                 { ofMonth = 25
-                , moments = []
+                , moment = Nothing
                 }
         , wednesday =
             Just
                 { ofMonth = 26
-                , moments = []
+                , moment = Nothing
                 }
         , thursday =
             Just
                 { ofMonth = 27
-                , moments = []
+                , moment = Nothing
                 }
         , friday =
             Just
                 { ofMonth = 28
-                , moments = []
+                , moment = Nothing
                 }
         , saturday =
             Just
                 { ofMonth = 29
-                , moments = []
+                , moment = Nothing
                 }
         }
     , sixth =
         { sunday =
             Just
                 { ofMonth = 30
-                , moments = []
+                , moment = Nothing
                 }
         , monday =
             Just
                 { ofMonth = 31
-                , moments = []
+                , moment = Nothing
                 }
         , tuesday =
             Nothing

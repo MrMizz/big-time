@@ -5,12 +5,15 @@ module Main exposing (main)
 import Browser
 import Browser.Navigation as Nav
 import Model.Model as Model exposing (Model)
+import Model.Month as Month exposing (Month)
 import Model.State as State exposing (State(..))
+import Model.Year as Year
 import Msg.Msg exposing (Msg(..), resetViewport)
 import Sub.Sub as Sub
 import Url
 import View.About.About
 import View.Cal.Cal
+import View.Cal.Day
 import View.Error.Error
 
 
@@ -66,10 +69,39 @@ view model =
                     View.About.About.view
 
                 Cal year moy ->
-                    View.Cal.Cal.view ( year, moy )
+                    let
+                        maybeMonth : Maybe Month
+                        maybeMonth =
+                            Year.data ( year, moy )
+                    in
+                    case maybeMonth of
+                        Just month ->
+                            View.Cal.Cal.view ( year, moy, month )
+
+                        Nothing ->
+                            View.Cal.Cal.void ( year, moy )
+
+                Day year moy int ->
+                    let
+                        maybeMonth : Maybe Month
+                        maybeMonth =
+                            Year.data ( year, moy )
+                    in
+                    case maybeMonth of
+                        Just month ->
+                            case Month.fromInt month int of
+                                Just day ->
+                                    View.Cal.Day.view (year, moy, day)
+
+                                Nothing ->
+                                    View.Error.Error.view "404; Invalid Path (Day)"
+
+                        Nothing ->
+                            View.Cal.Cal.void ( year, moy )
 
                 Error error ->
                     View.Error.Error.view error
+
     in
     { title = "the.tap.in"
     , body =

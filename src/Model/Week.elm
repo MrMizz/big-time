@@ -1,4 +1,4 @@
-module Model.Week exposing (Week, empty)
+module Model.Week exposing (Week, empty, toList)
 
 import Model.Day exposing (Day)
 
@@ -24,3 +24,28 @@ empty =
         Nothing
         Nothing
         Nothing
+
+toList : Week -> List Day
+toList week =
+    let
+        l =
+            [ week.sunday
+            , week.monday
+            , week.tuesday
+            , week.wednesday
+            , week.thursday
+            , week.friday
+            , week.saturday
+            ]
+
+        f: Maybe a -> List a -> List a
+        f maybe list =
+            case maybe of
+                Just a ->
+                    a :: list
+
+                Nothing ->
+                    list
+
+    in
+    List.foldr f [] l
