@@ -1,4 +1,4 @@
-module View.Cal.Day exposing (view)
+module View.Cal.DayOfMonth exposing (view)
 
 import Html exposing (Attribute, Html)
 import Html.Attributes exposing (class)
