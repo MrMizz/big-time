@@ -50,6 +50,6 @@ categories arg =
                 ]
     in
     Html.div
-        [ class "tags are-medium"
+        [ class "tags are-medium categories"
         ]
         (List.map category arg)
