@@ -55,4 +55,18 @@ body =
                     []
                 ]
             ]
+        , Html.div
+            [ class "mt-5"
+            ]
+            [ Html.a
+                [ class "icon"
+                , href "https://github.com/MrMizz/big-time/blob/develop/src/Main.elm"
+                , target "_blank"
+                ]
+                [ Html.i
+                    [ class "fab fa-github"
+                    ]
+                    []
+                ]
+            ]
         ]
