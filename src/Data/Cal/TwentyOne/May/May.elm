@@ -27,7 +27,7 @@ month =
                     Just
                         { url = "images/IMG_2992.jpg"
                         , description = ""
-                        , categories = [ Food ]
+                        , categories = [ Eats ]
                         }
                 }
         }

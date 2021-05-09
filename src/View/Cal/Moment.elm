@@ -1,7 +1,8 @@
-module View.Cal.Moment exposing (view)
+module View.Cal.Moment exposing (expanded, view)
 
 import Html exposing (Html)
 import Html.Attributes exposing (class, src)
+import Model.Category as Category exposing (Category)
 import Model.Moment exposing (Moment)
 import Msg.Msg exposing (Msg)
 
@@ -19,3 +20,36 @@ view moment =
                 []
             ]
         ]
+
+
+expanded : Moment -> Html Msg
+expanded moment =
+    Html.div
+        []
+        [ Html.figure
+            [ class "image"
+            ]
+            [ categories moment.categories
+            , Html.img
+                [ src moment.url
+                ]
+                []
+            ]
+        ]
+
+
+categories : List Category -> Html Msg
+categories arg =
+    let
+        category : Category -> Html Msg
+        category c =
+            Html.span
+                [ class "tag is-light is-family-secondary"
+                ]
+                [ Html.text (Category.toString c)
+                ]
+    in
+    Html.div
+        [ class "tags are-medium"
+        ]
+        (List.map category arg)

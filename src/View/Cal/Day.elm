@@ -26,7 +26,7 @@ body ( year, moy, day ) =
                     Html.div
                         []
                         [ header ( year, moy, day )
-                        , View.Cal.Moment.view m
+                        , View.Cal.Moment.expanded m
                         ]
 
                 Nothing ->
