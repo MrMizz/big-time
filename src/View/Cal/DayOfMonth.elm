@@ -18,7 +18,7 @@ view ( year, moy ) ( maybeDay, dayOfWeek ) =
             let
                 day =
                     Html.div
-                        [ class "day-cell"
+                        [ class "day-cell is-family-secondary"
                         ]
                         [ Html.text (String.fromInt d.ofMonth ++ " " ++ DayOfWeek.toString dayOfWeek)
                         ]
