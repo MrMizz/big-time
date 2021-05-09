@@ -3,6 +3,9 @@ secrets.tfvars
 .idea
 *.iml
 
+# images
+assets/images
+
 # css build
 assets/css/
 assets/node_modules/

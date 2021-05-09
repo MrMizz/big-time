@@ -21,16 +21,14 @@ body : ( Year, MonthOfYear, Day ) -> Html Msg
 body ( year, moy, day ) =
     let
         moment =
-            case day.moment of
-                Just m ->
+            case day.moments of
+                [] ->
+                    void ( year, moy, day )
+
+                nel ->
                     Html.div
                         []
-                        [ header ( year, moy, day )
-                        , View.Cal.Moment.expanded m
-                        ]
-
-                Nothing ->
-                    void ( year, moy, day )
+                        (header ( year, moy, day ) :: List.map View.Cal.Moment.expanded nel)
     in
     Html.div
         [ class "container"

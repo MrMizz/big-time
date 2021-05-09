@@ -3,7 +3,10 @@ module Model.Category exposing (Category(..), toString)
 
 type Category
     = Eats
-    | Architecture
+    | Buildings
+    | Cars
+    | Books
+    | Desks
     | Shadows
 
 
@@ -13,8 +16,17 @@ toString category =
         Eats ->
             "eats"
 
-        Architecture ->
-            "architecture"
+        Buildings ->
+            "buildings"
+
+        Cars ->
+            "cars"
+
+        Books ->
+            "books"
+
+        Desks ->
+            "desks"
 
         Shadows ->
             "shadows"

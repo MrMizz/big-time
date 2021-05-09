@@ -5,7 +5,7 @@ import Model.Moment exposing (Moment)
 
 type alias Day =
     { ofMonth : Int
-    , moment : Maybe Moment
+    , moments : List Moment
     }
 
 

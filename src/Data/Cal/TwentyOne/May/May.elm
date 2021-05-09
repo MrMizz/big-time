@@ -23,172 +23,282 @@ month =
         , saturday =
             Just
                 { ofMonth = 1
-                , moment =
-                    Just
-                        { url = "images/IMG_2992.jpg"
-                        , description = ""
-                        , categories = [ Eats ]
-                        }
+                , moments =
+                    [ { url = "images/2021/05/01/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/01/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/01/03.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/01/04.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/01/05.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/01/06.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    ]
                 }
         }
     , second =
         { sunday =
             Just
                 { ofMonth = 2
-                , moment = Nothing
+                , moments = []
                 }
         , monday =
             Just
                 { ofMonth = 3
-                , moment = Nothing
+                , moments =
+                    [ { url = "images/2021/05/03/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats, Books ]
+                      }
+                    , { url = "images/2021/05/03/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/03/03.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings, Books ]
+                      }
+                    , { url = "images/2021/05/03/04.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/03/05.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/03/06.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/03/07.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/03/08.jpeg"
+                      , caption = Nothing
+                      , categories = [ Cars ]
+                      }
+                    , { url = "images/2021/05/03/09.jpeg"
+                      , caption = Nothing
+                      , categories = [ Books ]
+                      }
+                    , { url = "images/2021/05/03/10.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings, Eats ]
+                      }
+                    , { url = "images/2021/05/03/11.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings, Eats ]
+                      }
+                    ]
                 }
         , tuesday =
             Just
                 { ofMonth = 4
-                , moment = Nothing
+                , moments =
+                    [ { url = "images/2021/05/04/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings, Cars ]
+                      }
+                    , { url = "images/2021/05/04/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings, Eats ]
+                      }
+                    ]
                 }
         , wednesday =
             Just
                 { ofMonth = 5
-                , moment = Nothing
+                , moments =
+                    [ { url = "images/2021/05/05/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Desks, Shadows ]
+                      }
+                    , { url = "images/2021/05/05/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Desks, Shadows ]
+                      }
+                    ]
                 }
         , thursday =
             Just
                 { ofMonth = 6
-                , moment = Nothing
+                , moments = []
                 }
         , friday =
             Just
                 { ofMonth = 7
-                , moment = Nothing
+                , moments =
+                    [ { url = "images/2021/05/07/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Shadows ]
+                      }
+                    , { url = "images/2021/05/07/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Shadows ]
+                      }
+                    , { url = "images/2021/05/07/03.jpeg"
+                      , caption = Nothing
+                      , categories = [ Shadows ]
+                      }
+                    ]
                 }
         , saturday =
             Just
                 { ofMonth = 8
-                , moment = Nothing
+                , moments =
+                    [ { url = "images/2021/05/08/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Cars ]
+                      }
+                    , { url = "images/2021/05/08/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Cars ]
+                      }
+                    ]
                 }
         }
     , third =
         { sunday =
             Just
                 { ofMonth = 9
-                , moment = Nothing
+                , moments =
+                    [ { url = "images/2021/05/09/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Cars, Buildings ]
+                      }
+                    ]
                 }
         , monday =
             Just
                 { ofMonth = 10
-                , moment = Nothing
+                , moments = []
                 }
         , tuesday =
             Just
                 { ofMonth = 11
-                , moment = Nothing
+                , moments = []
                 }
         , wednesday =
             Just
                 { ofMonth = 12
-                , moment = Nothing
+                , moments = []
                 }
         , thursday =
             Just
                 { ofMonth = 13
-                , moment = Nothing
+                , moments = []
                 }
         , friday =
             Just
                 { ofMonth = 14
-                , moment = Nothing
+                , moments = []
                 }
         , saturday =
             Just
                 { ofMonth = 15
-                , moment = Nothing
+                , moments = []
                 }
         }
     , fourth =
         { sunday =
             Just
                 { ofMonth = 16
-                , moment = Nothing
+                , moments = []
                 }
         , monday =
             Just
                 { ofMonth = 17
-                , moment = Nothing
+                , moments = []
                 }
         , tuesday =
             Just
                 { ofMonth = 18
-                , moment = Nothing
+                , moments = []
                 }
         , wednesday =
             Just
                 { ofMonth = 19
-                , moment = Nothing
+                , moments = []
                 }
         , thursday =
             Just
                 { ofMonth = 20
-                , moment = Nothing
+                , moments = []
                 }
         , friday =
             Just
                 { ofMonth = 21
-                , moment = Nothing
+                , moments = []
                 }
         , saturday =
             Just
                 { ofMonth = 22
-                , moment = Nothing
+                , moments = []
                 }
         }
     , fifth =
         { sunday =
             Just
                 { ofMonth = 23
-                , moment = Nothing
+                , moments = []
                 }
         , monday =
             Just
                 { ofMonth = 24
-                , moment = Nothing
+                , moments = []
                 }
         , tuesday =
             Just
                 { ofMonth = 25
-                , moment = Nothing
+                , moments = []
                 }
         , wednesday =
             Just
                 { ofMonth = 26
-                , moment = Nothing
+                , moments = []
                 }
         , thursday =
             Just
                 { ofMonth = 27
-                , moment = Nothing
+                , moments = []
                 }
         , friday =
             Just
                 { ofMonth = 28
-                , moment = Nothing
+                , moments = []
                 }
         , saturday =
             Just
                 { ofMonth = 29
-                , moment = Nothing
+                , moments = []
                 }
         }
     , sixth =
         { sunday =
             Just
                 { ofMonth = 30
-                , moment = Nothing
+                , moments = []
                 }
         , monday =
             Just
                 { ofMonth = 31
-                , moment = Nothing
+                , moments = []
                 }
         , tuesday =
             Nothing

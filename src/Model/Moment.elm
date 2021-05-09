@@ -5,6 +5,6 @@ import Model.Category exposing (Category)
 
 type alias Moment =
     { url : String
-    , description : String
+    , caption : Maybe String
     , categories : List Category
     }

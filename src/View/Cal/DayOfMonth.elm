@@ -23,14 +23,14 @@ view ( year, moy ) ( maybeDay, dayOfWeek ) =
                         [ Html.text (String.fromInt d.ofMonth ++ " " ++ DayOfWeek.toString dayOfWeek)
                         ]
             in
-            case d.moment of
-                Just m ->
+            case d.moments of
+                head :: _ ->
                     Html.a
                         [ class "column has-border-2 mx-1 my-1"
                         , State.href (State.Day year moy d.ofMonth)
                         ]
                         [ day
-                        , View.Cal.Moment.view m
+                        , View.Cal.Moment.view head
                         ]
 
                 _ ->
