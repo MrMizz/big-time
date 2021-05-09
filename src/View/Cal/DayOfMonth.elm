@@ -11,8 +11,8 @@ import Msg.Msg exposing (Msg)
 import View.Cal.Moment
 
 
-view : (Year, MonthOfYear) -> ( Maybe Day, DayOfWeek ) -> Html Msg
-view (year, moy) ( maybeDay, dayOfWeek ) =
+view : ( Year, MonthOfYear ) -> ( Maybe Day, DayOfWeek ) -> Html Msg
+view ( year, moy ) ( maybeDay, dayOfWeek ) =
     case maybeDay of
         Just d ->
             let
@@ -23,7 +23,7 @@ view (year, moy) ( maybeDay, dayOfWeek ) =
                         [ Html.text (String.fromInt d.ofMonth ++ " " ++ DayOfWeek.toString dayOfWeek)
                         ]
             in
-           case d.moment of
+            case d.moment of
                 Just m ->
                     Html.a
                         [ class "column has-border-2 mx-1 my-1"

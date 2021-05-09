@@ -91,7 +91,7 @@ view model =
                         Just month ->
                             case Month.fromInt month int of
                                 Just day ->
-                                    View.Cal.Day.view (year, moy, day)
+                                    View.Cal.Day.view ( year, moy, day )
 
                                 Nothing ->
                                     View.Error.Error.view "404; Invalid Path (Day)"
@@ -101,7 +101,6 @@ view model =
 
                 Error error ->
                     View.Error.Error.view error
-
     in
     { title = "the.tap.in"
     , body =

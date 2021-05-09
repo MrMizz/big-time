@@ -8,7 +8,8 @@ type alias Day =
     , moment : Maybe Moment
     }
 
-print: Int -> String
+
+print : Int -> String
 print int =
     case int < 10 of
         True ->

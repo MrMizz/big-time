@@ -36,6 +36,7 @@ monthParser : UrlParser.Parser (MonthOfYear -> b) b
 monthParser =
     UrlParser.custom "MONTH" MonthOfYear.fromString
 
+
 parse : Url.Url -> State
 parse url =
     let

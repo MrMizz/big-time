@@ -10,7 +10,7 @@ import Msg.Msg exposing (Msg)
 import View.Cal.DayOfMonth
 
 
-view : (Year, MonthOfYear) -> Week -> Html Msg
+view : ( Year, MonthOfYear ) -> Week -> Html Msg
 view tup week =
     Html.div
         [ class "columns is-centered is-mobile"

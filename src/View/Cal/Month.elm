@@ -8,7 +8,7 @@ import Msg.Msg exposing (Msg)
 import View.Cal.Week
 
 
-view : (Year, MonthOfYear) -> Month -> Html Msg
+view : ( Year, MonthOfYear ) -> Month -> Html Msg
 view tup month =
     Html.div
         []

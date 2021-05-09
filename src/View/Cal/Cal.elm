@@ -12,19 +12,26 @@ import View.Hero
 
 view : ( Year, MonthOfYear, Month ) -> Html Msg
 view ( year, moy, month ) =
-    View.Hero.view (body ( year, moy, month))
+    View.Hero.view (body ( year, moy, month ))
 
-void : (Year, MonthOfYear) ->  Html Msg
-void (year, moy) =
-    Html.div
-        []
-        [ header ( year, moy )
-        , Html.div
-            [ class "void-img"
-            ]
-            [ View.Cal.Month.view (year, moy) Month.empty
-            ]
-        ]
+
+void : ( Year, MonthOfYear ) -> Html Msg
+void ( year, moy ) =
+    let
+        void_ =
+            Html.div
+                [ class "container"
+                ]
+                [ header ( year, moy )
+                , Html.div
+                    [ class "void-img"
+                    ]
+                    [ View.Cal.Month.view ( year, moy ) Month.empty
+                    ]
+                ]
+    in
+    View.Hero.view void_
+
 
 body : ( Year, MonthOfYear, Month ) -> Html Msg
 body ( year, moy, month ) =
@@ -34,7 +41,7 @@ body ( year, moy, month ) =
         [ Html.div
             []
             [ header ( year, moy )
-            , View.Cal.Month.view (year, moy) month
+            , View.Cal.Month.view ( year, moy ) month
             ]
         ]
 

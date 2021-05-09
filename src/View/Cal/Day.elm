@@ -11,24 +11,26 @@ import View.Cal.Moment
 import View.Cal.Month
 import View.Hero
 
-view : (Year, MonthOfYear, Day) -> Html Msg
+
+view : ( Year, MonthOfYear, Day ) -> Html Msg
 view tup =
     View.Hero.view (body tup)
 
-body : (Year, MonthOfYear, Day) -> Html Msg
-body (year, moy, day) =
+
+body : ( Year, MonthOfYear, Day ) -> Html Msg
+body ( year, moy, day ) =
     let
         moment =
             case day.moment of
                 Just m ->
                     Html.div
                         []
-                        [ header (year, moy, day)
+                        [ header ( year, moy, day )
                         , View.Cal.Moment.view m
                         ]
 
                 Nothing ->
-                    void (year, moy, day)
+                    void ( year, moy, day )
     in
     Html.div
         [ class "container"
@@ -36,17 +38,19 @@ body (year, moy, day) =
         [ moment
         ]
 
-void : (Year, MonthOfYear, Day) ->  Html Msg
-void (year, moy, day) =
+
+void : ( Year, MonthOfYear, Day ) -> Html Msg
+void ( year, moy, day ) =
     Html.div
         []
         [ header ( year, moy, day )
         , Html.div
             [ class "void-img"
             ]
-            [ View.Cal.Month.view (year, moy) Month.empty
+            [ View.Cal.Month.view ( year, moy ) Month.empty
             ]
         ]
+
 
 header : ( Year, MonthOfYear, Day ) -> Html Msg
 header ( year, moy, day ) =

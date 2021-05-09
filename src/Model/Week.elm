@@ -25,6 +25,7 @@ empty =
         Nothing
         Nothing
 
+
 toList : Week -> List Day
 toList week =
     let
@@ -38,7 +39,7 @@ toList week =
             , week.saturday
             ]
 
-        f: Maybe a -> List a -> List a
+        f : Maybe a -> List a -> List a
         f maybe list =
             case maybe of
                 Just a ->
@@ -46,6 +47,5 @@ toList week =
 
                 Nothing ->
                     list
-
     in
     List.foldr f [] l
