@@ -146,15 +146,15 @@ month =
                 , moments =
                     [ { url = "images/2021/05/07/01.jpeg"
                       , caption = Nothing
-                      , categories = [ Shadows ]
+                      , categories = [ Shadows, Music ]
                       }
                     , { url = "images/2021/05/07/02.jpeg"
                       , caption = Nothing
-                      , categories = [ Shadows ]
+                      , categories = [ Shadows, Music ]
                       }
                     , { url = "images/2021/05/07/03.jpeg"
                       , caption = Nothing
-                      , categories = [ Shadows ]
+                      , categories = [ Shadows, Books ]
                       }
                     ]
                 }
@@ -187,7 +187,36 @@ month =
         , monday =
             Just
                 { ofMonth = 10
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/05/10/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/10/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/10/03.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/10/04.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/10/05.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/10/06.jpeg"
+                      , caption = Nothing
+                      , categories = [ Shadows, Buildings ]
+                      }
+                    , { url = "images/2021/05/10/07.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    ]
                 }
         , tuesday =
             Just

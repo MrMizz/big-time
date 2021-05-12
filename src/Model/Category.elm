@@ -7,6 +7,7 @@ type Category
     | Cars
     | Books
     | Desks
+    | Music
     | Shadows
 
 
@@ -27,6 +28,9 @@ toString category =
 
         Desks ->
             "desks"
+
+        Music ->
+            "music"
 
         Shadows ->
             "shadows"
