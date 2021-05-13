@@ -221,7 +221,20 @@ month =
         , tuesday =
             Just
                 { ofMonth = 11
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/05/11/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Cars ]
+                      }
+                    , { url = "images/2021/05/11/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/11/03.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    ]
                 }
         , wednesday =
             Just
