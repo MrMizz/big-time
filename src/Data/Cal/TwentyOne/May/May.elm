@@ -261,7 +261,56 @@ month =
         , thursday =
             Just
                 { ofMonth = 13
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/05/13/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/13/03.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/13/04.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/13/05.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/13/06.jpeg"
+                      , caption = Nothing
+                      , categories = [ Shadows ]
+                      }
+                    , { url = "images/2021/05/13/07.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/13/08.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/13/09.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/13/10.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/13/11.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/13/12.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/13/13.jpeg"
+                      , caption = Nothing
+                      , categories = [ Cars ]
+                      }
+                    ]
                 }
         , friday =
             Just

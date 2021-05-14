@@ -15,22 +15,22 @@ toString : Category -> String
 toString category =
     case category of
         Eats ->
-            "eats"
+            "comidas"
 
         Buildings ->
-            "buildings"
+            "edificios"
 
         Cars ->
-            "cars"
+            "carros"
 
         Books ->
-            "books"
+            "libros"
 
         Desks ->
-            "desks"
+            "mesas"
 
         Music ->
-            "music"
+            "musica"
 
         Shadows ->
             "shadows"
