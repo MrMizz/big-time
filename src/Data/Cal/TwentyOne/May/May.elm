@@ -386,10 +386,6 @@ month =
                       , caption = Nothing
                       , categories = [ Shadows, Buildings ]
                       }
-                    , { url = "images/2021/05/16/06.jpeg"
-                      , caption = Nothing
-                      , categories = [ Family ]
-                      }
                     ]
                 }
         , monday =

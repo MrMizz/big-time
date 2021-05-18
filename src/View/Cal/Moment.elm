@@ -44,12 +44,12 @@ categories arg =
         category : Category -> Html Msg
         category c =
             Html.span
-                [ class "tag is-light is-family-secondary"
+                [ class "tag is-light"
                 ]
                 [ Html.text (Category.toString c)
                 ]
     in
     Html.div
-        [ class "tags are-medium categories"
+        [ class "tags are-large categories"
         ]
         (List.map category arg)
