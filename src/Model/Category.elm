@@ -8,6 +8,8 @@ type Category
     | Books
     | Desks
     | Music
+    | Views
+    | Family
     | Shadows
 
 
@@ -31,6 +33,12 @@ toString category =
 
         Music ->
             "musica"
+
+        Views ->
+            "vistas"
+
+        Family ->
+            "familia"
 
         Shadows ->
             "shadows"

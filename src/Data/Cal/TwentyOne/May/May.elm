@@ -26,23 +26,23 @@ month =
                 , moments =
                     [ { url = "images/2021/05/01/01.jpeg"
                       , caption = Nothing
-                      , categories = [ Buildings ]
+                      , categories = [ Buildings, Views ]
                       }
                     , { url = "images/2021/05/01/02.jpeg"
                       , caption = Nothing
-                      , categories = [ Buildings ]
+                      , categories = [ Buildings, Views ]
                       }
                     , { url = "images/2021/05/01/03.jpeg"
                       , caption = Nothing
-                      , categories = [ Buildings ]
+                      , categories = [ Buildings, Views ]
                       }
                     , { url = "images/2021/05/01/04.jpeg"
                       , caption = Nothing
-                      , categories = [ Buildings ]
+                      , categories = [ Buildings, Views ]
                       }
                     , { url = "images/2021/05/01/05.jpeg"
                       , caption = Nothing
-                      , categories = [ Buildings ]
+                      , categories = [ Buildings, Views ]
                       }
                     , { url = "images/2021/05/01/06.jpeg"
                       , caption = Nothing
@@ -353,14 +353,44 @@ month =
         , saturday =
             Just
                 { ofMonth = 15
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/05/15/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Shadows ]
+                      }
+                    ]
                 }
         }
     , fourth =
         { sunday =
             Just
                 { ofMonth = 16
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/05/16/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/16/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Views ]
+                      }
+                    , { url = "images/2021/05/16/03.jpeg"
+                      , caption = Nothing
+                      , categories = [ Views ]
+                      }
+                    , { url = "images/2021/05/16/04.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/16/05.jpeg"
+                      , caption = Nothing
+                      , categories = [ Shadows, Buildings ]
+                      }
+                    , { url = "images/2021/05/16/06.jpeg"
+                      , caption = Nothing
+                      , categories = [ Family ]
+                      }
+                    ]
                 }
         , monday =
             Just
