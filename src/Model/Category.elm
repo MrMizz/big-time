@@ -15,7 +15,7 @@ toString : Category -> String
 toString category =
     case category of
         Eats ->
-            "comidas"
+            "comida"
 
         Buildings ->
             "edificios"

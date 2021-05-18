@@ -93,7 +93,7 @@ month =
                       , caption = Nothing
                       , categories = [ Cars ]
                       }
-                    , { url = "images/2021/05/03/09.jpeg"
+                    , { url = "images/2021/05/03/08.jpeg"
                       , caption = Nothing
                       , categories = [ Books ]
                       }
@@ -290,7 +290,7 @@ month =
                       , caption = Nothing
                       , categories = [ Eats ]
                       }
-                    , { url = "images/2021/05/13/09.jpeg"
+                    , { url = "images/2021/05/13/08.jpeg"
                       , caption = Nothing
                       , categories = [ Eats ]
                       }
@@ -315,7 +315,40 @@ month =
         , friday =
             Just
                 { ofMonth = 14
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/05/14/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats, Shadows ]
+                      }
+                    , { url = "images/2021/05/14/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Cars ]
+                      }
+                    , { url = "images/2021/05/14/03.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings, Shadows ]
+                      }
+                    , { url = "images/2021/05/14/04.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/14/05.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/14/06.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/14/07.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/14/08.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    ]
                 }
         , saturday =
             Just
