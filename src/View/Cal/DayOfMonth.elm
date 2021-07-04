@@ -26,7 +26,7 @@ view ( year, moy ) ( maybeDay, dayOfWeek ) =
             case d.moments of
                 head :: _ ->
                     Html.a
-                        [ class "column has-border-2 mx-1 my-1"
+                        [ class "pop column has-border-2 mx-1 my-1"
                         , State.href (State.Day year moy d.ofMonth)
                         ]
                         [ day
@@ -35,7 +35,7 @@ view ( year, moy ) ( maybeDay, dayOfWeek ) =
 
                 _ ->
                     Html.div
-                        [ class "column has-border-2 mx-1 my-1"
+                        [ class "pop column has-border-2 mx-1 my-1"
                         ]
                         [ day
                         ]
