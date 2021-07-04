@@ -3,7 +3,7 @@ module View.Cal.Day exposing (view)
 import Data.Traverse.Day exposing (DayTraversal(..))
 import Data.Traverse.Month
 import Html exposing (Html)
-import Html.Attributes exposing (class)
+import Html.Attributes exposing (class, style)
 import Html.Events exposing (onClick)
 import Model.Day as Day exposing (Day)
 import Model.Month as Month exposing (Month)
@@ -155,7 +155,8 @@ header ( year, moy, day ) month =
     let
         header_ =
             Html.div
-                [ class "level-item"
+                [ style "display" "inline-block"
+                , class "mx-3"
                 ]
                 [ Html.h2
                     [ class "subtitle is-6 has-text-centered"
@@ -164,17 +165,17 @@ header ( year, moy, day ) month =
                     ]
                 ]
     in
-    Html.nav
-        [ class "level"
+    Html.div
+        [ class "has-text-centered"
         ]
         [ Html.div
-            [ class "level-item"
+            [ style "display" "inline-block"
             ]
             [ previous ( year, moy, day ) month
             ]
         , header_
         , Html.div
-            [ class "level-item"
+            [ style "display" "inline-block"
             ]
             [ next ( year, moy, day ) month
             ]

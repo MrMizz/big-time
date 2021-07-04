@@ -2,7 +2,7 @@ module View.Cal.Cal exposing (view, void)
 
 import Data.Traverse.Month
 import Html exposing (Html)
-import Html.Attributes exposing (class)
+import Html.Attributes exposing (class, style)
 import Model.Month as Month exposing (Month)
 import Model.MonthOfYear as MonthOfYear exposing (MonthOfYear)
 import Model.State as State
@@ -55,7 +55,8 @@ header ( year, moy ) =
     let
         header_ =
             Html.div
-                [ class "level-item"
+                [ style "display" "inline-block"
+                , class "mx-3"
                 ]
                 [ Html.h2
                     [ class "subtitle is-6 has-text-centered"
@@ -64,8 +65,9 @@ header ( year, moy ) =
                     ]
                 ]
     in
-    Html.nav
-        [ class "level"
+    Html.div
+        [ style "margin-bottom" "35px"
+        , class "has-text-centered"
         ]
         [ previous ( year, moy )
         , header_
@@ -78,7 +80,7 @@ previous ( year, moy ) =
     case Data.Traverse.Month.previous ( year, moy ) of
         Just ( y, m ) ->
             Html.div
-                [ class "level-item"
+                [ style "display" "inline-block"
                 ]
                 [ Html.a
                     [ State.href (State.Cal y m)
@@ -96,7 +98,7 @@ next ( year, moy ) =
     case Data.Traverse.Month.next ( year, moy ) of
         Just ( y, m ) ->
             Html.div
-                [ class "level-item"
+                [ style "display" "inline-block"
                 ]
                 [ Html.a
                     [ State.href (State.Cal y m)
