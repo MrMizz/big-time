@@ -10,6 +10,7 @@ type Msg
     = NoOp
     | UrlChanged Url.Url
     | LinkClicked Browser.UrlRequest
+    | ResetViewport
 
 
 resetViewport : Cmd Msg

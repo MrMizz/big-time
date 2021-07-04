@@ -55,6 +55,9 @@ update msg model =
                 Browser.External href ->
                     ( model, Nav.load href )
 
+        ResetViewport ->
+            ( model, resetViewport )
+
 
 
 -- VIEW

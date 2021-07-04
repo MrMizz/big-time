@@ -4,12 +4,13 @@ import Data.Traverse.Day exposing (DayTraversal(..))
 import Data.Traverse.Month
 import Html exposing (Html)
 import Html.Attributes exposing (class)
+import Html.Events exposing (onClick)
 import Model.Day as Day exposing (Day)
 import Model.Month as Month exposing (Month)
 import Model.MonthOfYear as MonthOfYear exposing (MonthOfYear)
 import Model.State as State
 import Model.Year as Year exposing (Year)
-import Msg.Msg exposing (Msg)
+import Msg.Msg exposing (Msg(..))
 import View.Cal.Moment
 import View.Cal.Month
 import View.Cal.Next
@@ -25,8 +26,8 @@ view tup month =
 body : ( Year, MonthOfYear, Day ) -> Month -> Html Msg
 body ( year, moy, day ) month =
     let
-        moment : Html Msg
-        moment =
+        moments : Html Msg
+        moments =
             case day.moments of
                 [] ->
                     void ( year, moy, day ) month
@@ -35,11 +36,27 @@ body ( year, moy, day ) month =
                     Html.div
                         []
                         (header ( year, moy, day ) month :: List.map View.Cal.Moment.expanded nel)
+
+        reset : Html Msg
+        reset =
+            Html.div
+                [ onClick ResetViewport
+                ]
+                [ Html.span
+                    [ class "icon has-text-link"
+                    ]
+                    [ Html.i
+                        [ class "fas fa-arrow-up"
+                        ]
+                        []
+                    ]
+                ]
     in
     Html.div
         [ class "container"
         ]
-        [ moment
+        [ moments
+        , reset
         ]
 
 
@@ -48,7 +65,6 @@ next ( year, moy, day ) month =
     let
         dayTraversal =
             Data.Traverse.Day.next month day.ofMonth
-
     in
     case dayTraversal of
         NextMonth ->
@@ -88,7 +104,6 @@ previous ( year, moy, day ) month =
         dayTraversal : DayTraversal
         dayTraversal =
             Data.Traverse.Day.previous month day.ofMonth
-
     in
     case dayTraversal of
         NextMonth ->
