@@ -1,9 +1,11 @@
 module View.Cal.Cal exposing (view, void)
 
+import Data.Traverse.Month
 import Html exposing (Html)
 import Html.Attributes exposing (class)
 import Model.Month as Month exposing (Month)
 import Model.MonthOfYear as MonthOfYear exposing (MonthOfYear)
+import Model.State as State
 import Model.Year as Year exposing (Year)
 import Msg.Msg exposing (Msg)
 import View.Cal.Month
@@ -48,8 +50,60 @@ body ( year, moy, month ) =
 
 header : ( Year, MonthOfYear ) -> Html Msg
 header ( year, moy ) =
-    Html.h2
-        [ class "subtitle is-6 has-text-centered"
+    let
+        header_ =
+            Html.div
+                [ class "level-item"
+                ]
+                [ Html.h2
+                    [ class "subtitle is-6 has-text-centered"
+                    ]
+                    [ Html.text (Year.toString year ++ " " ++ MonthOfYear.toString moy)
+                    ]
+                ]
+    in
+    Html.nav
+        [ class "level"
         ]
-        [ Html.text (Year.toString year ++ " " ++ MonthOfYear.toString moy)
+        [ previous ( year, moy )
+        , header_
+        , next ( year, moy )
         ]
+
+
+previous : ( Year, MonthOfYear ) -> Html Msg
+previous ( year, moy ) =
+    case Data.Traverse.Month.previous ( year, moy ) of
+        Just ( y, m ) ->
+            Html.div
+                [ class "level-item"
+                ]
+                [ Html.a
+                    [ class "button"
+                    , State.href (State.Cal y m)
+                    ]
+                    [ Html.text "previous"
+                    ]
+                ]
+
+        Nothing ->
+            Html.div [] []
+
+
+next : ( Year, MonthOfYear ) -> Html Msg
+next ( year, moy ) =
+    case Data.Traverse.Month.next ( year, moy ) of
+        Just ( y, m ) ->
+            Html.div
+                [ class "level-item"
+                ]
+                [ Html.a
+                    [ class "button"
+                    , State.href (State.Cal y m)
+                    ]
+                    [ Html.text "next"
+                    ]
+                ]
+
+        Nothing ->
+            Html.div [] []
