@@ -20,43 +20,45 @@ find ( month, int ) direction =
         daysInMonth : List Day
         daysInMonth =
             Month.toDays month
-    in
-    case List.filter (\day -> day.ofMonth == int) daysInMonth of
-        [] ->
-            Empty
 
-        head :: _ ->
-            case head.moments of
+        maybeLastDay : Maybe Day
+        maybeLastDay =
+            List.head (List.reverse daysInMonth)
+
+        find_ =
+            case List.filter (\day -> day.ofMonth == int) daysInMonth of
                 [] ->
-                    case direction of
-                        Up ->
-                            case List.head (List.reverse daysInMonth) of
-                                Just lastDayOfMonth ->
-                                    case lastDayOfMonth.ofMonth == int of
-                                        True ->
-                                            NextMonth
+                    Empty
 
-                                        False ->
-                                            find ( month, step Up int ) Up
+                head :: _ ->
+                    case head.moments of
+                        [] ->
+                            find ( month, step direction int ) direction
 
-                                Nothing ->
-                                    Empty
+                        _ ->
+                            Found head
+    in
+    case direction of
+        Up ->
+            case maybeLastDay of
+                Just lastDay ->
+                    case lastDay.ofMonth == (int - 1) of
+                        True ->
+                            NextMonth
 
-                        Down ->
-                            case List.head daysInMonth of
-                                Just firstDayOfMonth ->
-                                    case firstDayOfMonth.ofMonth == int of
-                                        True ->
-                                            PreviousMonth
+                        False ->
+                            find_
 
-                                        False ->
-                                            find ( month, step Down int ) Down
+                Nothing ->
+                    Empty
 
-                                Nothing ->
-                                    Empty
+        Down ->
+            case int == 0 of
+                True ->
+                    PreviousMonth
 
-                _ ->
-                    Found head
+                False ->
+                    find_
 
 
 type Direction
