@@ -9,6 +9,8 @@ import Model.State as State
 import Model.Year as Year exposing (Year)
 import Msg.Msg exposing (Msg)
 import View.Cal.Month
+import View.Cal.Next
+import View.Cal.Previous
 import View.Hero
 
 
@@ -79,10 +81,9 @@ previous ( year, moy ) =
                 [ class "level-item"
                 ]
                 [ Html.a
-                    [ class "button"
-                    , State.href (State.Cal y m)
+                    [ State.href (State.Cal y m)
                     ]
-                    [ Html.text "previous"
+                    [ View.Cal.Previous.view
                     ]
                 ]
 
@@ -98,10 +99,9 @@ next ( year, moy ) =
                 [ class "level-item"
                 ]
                 [ Html.a
-                    [ class "button"
-                    , State.href (State.Cal y m)
+                    [ State.href (State.Cal y m)
                     ]
-                    [ Html.text "next"
+                    [ View.Cal.Next.view
                     ]
                 ]
 

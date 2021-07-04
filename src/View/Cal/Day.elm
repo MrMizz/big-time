@@ -12,6 +12,8 @@ import Model.Year as Year exposing (Year)
 import Msg.Msg exposing (Msg)
 import View.Cal.Moment
 import View.Cal.Month
+import View.Cal.Next
+import View.Cal.Previous
 import View.Hero
 
 
@@ -46,6 +48,7 @@ next ( year, moy, day ) month =
     let
         dayTraversal =
             Data.Traverse.Day.next month day.ofMonth
+
     in
     case dayTraversal of
         NextMonth ->
@@ -57,10 +60,10 @@ next ( year, moy, day ) month =
             case Data.Traverse.Month.month ( year, nextMoy ) of
                 Just _ ->
                     Html.a
-                        [ class "button"
-                        , State.href (State.Cal year nextMoy)
+                        [ State.href (State.Cal year nextMoy)
                         ]
-                        []
+                        [ View.Cal.Next.view
+                        ]
 
                 Nothing ->
                     Html.div [] []
@@ -70,10 +73,9 @@ next ( year, moy, day ) month =
 
         Found nextDay ->
             Html.a
-                [ class "button"
-                , State.href (State.Day year moy nextDay.ofMonth)
+                [ State.href (State.Day year moy nextDay.ofMonth)
                 ]
-                [ Html.text "next"
+                [ View.Cal.Next.view
                 ]
 
         Empty ->
@@ -86,6 +88,7 @@ previous ( year, moy, day ) month =
         dayTraversal : DayTraversal
         dayTraversal =
             Data.Traverse.Day.previous month day.ofMonth
+
     in
     case dayTraversal of
         NextMonth ->
@@ -100,20 +103,19 @@ previous ( year, moy, day ) month =
             case Data.Traverse.Month.month ( year, previousMoy ) of
                 Just _ ->
                     Html.a
-                        [ class "button"
-                        , State.href (State.Cal year previousMoy)
+                        [ State.href (State.Cal year previousMoy)
                         ]
-                        []
+                        [ View.Cal.Previous.view
+                        ]
 
                 Nothing ->
                     Html.div [] []
 
         Found previousDay ->
             Html.a
-                [ class "button"
-                , State.href (State.Day year moy previousDay.ofMonth)
+                [ State.href (State.Day year moy previousDay.ofMonth)
                 ]
-                [ Html.text "previous"
+                [ View.Cal.Previous.view
                 ]
 
         Empty ->
