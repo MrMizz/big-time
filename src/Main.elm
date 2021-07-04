@@ -4,10 +4,10 @@ module Main exposing (main)
 
 import Browser
 import Browser.Navigation as Nav
+import Data.Traverse.Month as TraverseMonth
 import Model.Model as Model exposing (Model)
 import Model.Month as Month exposing (Month)
 import Model.State as State exposing (State(..))
-import Model.Year as Year
 import Msg.Msg exposing (Msg(..), resetViewport)
 import Sub.Sub as Sub
 import Url
@@ -72,7 +72,7 @@ view model =
                     let
                         maybeMonth : Maybe Month
                         maybeMonth =
-                            Year.data ( year, moy )
+                            TraverseMonth.month ( year, moy )
                     in
                     case maybeMonth of
                         Just month ->
@@ -85,13 +85,13 @@ view model =
                     let
                         maybeMonth : Maybe Month
                         maybeMonth =
-                            Year.data ( year, moy )
+                            TraverseMonth.month ( year, moy )
                     in
                     case maybeMonth of
                         Just month ->
                             case Month.fromInt month int of
                                 Just day ->
-                                    View.Cal.Day.view ( year, moy, day )
+                                    View.Cal.Day.view ( year, moy, day ) month
 
                                 Nothing ->
                                     View.Error.Error.view "404; Invalid Path (Day)"

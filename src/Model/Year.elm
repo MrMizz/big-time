@@ -1,8 +1,4 @@
-module Model.Year exposing (Year(..), data, fromString, init, next, previous, toString)
-
-import Data.Cal.TwentyOne.May.May
-import Model.Month exposing (Month)
-import Model.MonthOfYear exposing (MonthOfYear(..))
+module Model.Year exposing (Year(..), fromString, init, next, previous, toString)
 
 
 type Year
@@ -56,18 +52,3 @@ previous year =
 
         TwentyTwo ->
             Just TwentyOne
-
-
-data : ( Year, MonthOfYear ) -> Maybe Month
-data ( year, moy ) =
-    case year of
-        TwentyOne ->
-            case moy of
-                May ->
-                    Just Data.Cal.TwentyOne.May.May.month
-
-                _ ->
-                    Nothing
-
-        TwentyTwo ->
-            Nothing

@@ -1,4 +1,4 @@
-module Model.Month exposing (Month, empty, fromInt)
+module Model.Month exposing (Month, empty, fromInt, toDays)
 
 import Model.Day exposing (Day)
 import Model.Week as Week exposing (Week)
@@ -34,12 +34,7 @@ fromInt month int =
 
         l : List Day
         l =
-            List.filter f (Week.toList month.first)
-                ++ List.filter f (Week.toList month.second)
-                ++ List.filter f (Week.toList month.third)
-                ++ List.filter f (Week.toList month.fourth)
-                ++ List.filter f (Week.toList month.fifth)
-                ++ List.filter f (Week.toList month.sixth)
+            List.filter f (toDays month)
     in
     case l of
         head :: _ ->
@@ -47,3 +42,13 @@ fromInt month int =
 
         [] ->
             Nothing
+
+
+toDays : Month -> List Day
+toDays month =
+    Week.toList month.first
+        ++ Week.toList month.second
+        ++ Week.toList month.third
+        ++ Week.toList month.fourth
+        ++ Week.toList month.fifth
+        ++ Week.toList month.sixth

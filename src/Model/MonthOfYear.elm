@@ -1,4 +1,4 @@
-module Model.MonthOfYear exposing (MonthOfYear(..), fromString, init, toString)
+module Model.MonthOfYear exposing (MonthOfYear(..), fromString, init, next, previous, toString)
 
 
 type MonthOfYear
@@ -19,6 +19,86 @@ type MonthOfYear
 init : MonthOfYear
 init =
     May
+
+
+next : MonthOfYear -> MonthOfYear
+next moy =
+    case moy of
+        Jan ->
+            Feb
+
+        Feb ->
+            Mar
+
+        Mar ->
+            Apr
+
+        Apr ->
+            May
+
+        May ->
+            Jun
+
+        Jun ->
+            Jul
+
+        Jul ->
+            Aug
+
+        Aug ->
+            Sep
+
+        Sep ->
+            Oct
+
+        Oct ->
+            Nov
+
+        Nov ->
+            Dec
+
+        Dec ->
+            Jan
+
+
+previous : MonthOfYear -> MonthOfYear
+previous moy =
+    case moy of
+        Jan ->
+            Dec
+
+        Feb ->
+            Jan
+
+        Mar ->
+            Feb
+
+        Apr ->
+            Mar
+
+        May ->
+            Apr
+
+        Jun ->
+            May
+
+        Jul ->
+            Jun
+
+        Aug ->
+            Jul
+
+        Sep ->
+            Aug
+
+        Oct ->
+            Sep
+
+        Nov ->
+            Oct
+
+        Dec ->
+            Nov
 
 
 fromString : String -> Maybe MonthOfYear
