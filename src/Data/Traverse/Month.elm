@@ -1,5 +1,6 @@
 module Data.Traverse.Month exposing (month, next, previous)
 
+import Data.Cal.TwentyOne.July.July
 import Data.Cal.TwentyOne.June.June
 import Data.Cal.TwentyOne.May.May
 import Model.Month exposing (Month)
@@ -17,6 +18,9 @@ month ( year, moy ) =
 
                 Jun ->
                     Just Data.Cal.TwentyOne.June.June.month
+
+                Jul ->
+                    Just Data.Cal.TwentyOne.July.July.month
 
                 _ ->
                     Nothing
