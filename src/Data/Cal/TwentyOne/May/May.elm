@@ -589,29 +589,98 @@ month =
         , wednesday =
             Just
                 { ofMonth = 26
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/05/26/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Family ]
+                      }
+                    , { url = "images/2021/05/26/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Family ]
+                      }
+                    ]
                 }
         , thursday =
             Just
                 { ofMonth = 27
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/05/27/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats, Buildings ]
+                      }
+                    , { url = "images/2021/05/27/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings, Shadows ]
+                      }
+                    ]
                 }
         , friday =
             Just
                 { ofMonth = 28
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/05/28/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/28/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings ]
+                      }
+                    , { url = "images/2021/05/28/03.jpeg"
+                      , caption = Nothing
+                      , categories = [ Buildings, Shadows ]
+                      }
+                    , { url = "images/2021/05/28/04.jpeg"
+                      , caption = Nothing
+                      , categories = [ Shadows, Eats ]
+                      }
+                    ]
                 }
         , saturday =
             Just
                 { ofMonth = 29
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/05/29/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats, Shadows ]
+                      }
+                    , { url = "images/2021/05/29/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Shadows ]
+                      }
+                    , { url = "images/2021/05/29/03.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/29/04.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    , { url = "images/2021/05/29/05.jpeg"
+                      , caption = Nothing
+                      , categories = [ Shadows, Buildings ]
+                      }
+                    , { url = "images/2021/05/29/06.jpeg"
+                      , caption = Nothing
+                      , categories = [ Cars ]
+                      }
+                    ]
                 }
         }
     , sixth =
         { sunday =
             Just
                 { ofMonth = 30
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/05/30/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Design, Shadows ]
+                      }
+                    , { url = "images/2021/05/30/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Shadows ]
+                      }
+                    ]
                 }
         , monday =
             Just
