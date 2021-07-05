@@ -1,5 +1,6 @@
 module Data.Cal.TwentyOne.July.July exposing (month)
 
+import Model.Category exposing (Category(..))
 import Model.Month exposing (Month)
 import Model.Week
 
@@ -18,7 +19,12 @@ month =
         , thursday =
             Just
                 { ofMonth = 1
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/07/01/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    ]
                 }
         , friday =
             Just
@@ -35,7 +41,16 @@ month =
         { sunday =
             Just
                 { ofMonth = 4
-                , moments = []
+                , moments =
+                    [ { url = "images/2021/07/04/01.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats, Books ]
+                      }
+                    , { url = "images/2021/07/04/02.jpeg"
+                      , caption = Nothing
+                      , categories = [ Eats ]
+                      }
+                    ]
                 }
         , monday =
             Just
