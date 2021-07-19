@@ -40,6 +40,14 @@ view =
                                 [ Html.text "blog"
                                 ]
                             ]
+                        , Html.li
+                            []
+                            [ Html.a
+                                [ State.href Playlists
+                                ]
+                                [ Html.text "playlists"
+                                ]
+                            ]
                         ]
                     ]
                 ]
