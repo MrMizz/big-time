@@ -41,6 +41,10 @@ body {
   border: 1px solid black;
 }
 
+.has-border-3 {
+  border-right: 1px dotted black;
+}
+
 .void-img {
   background: url("../images/noise1.jpg");
   content: "";

@@ -25,7 +25,8 @@ view =
                     [ Html.ul
                         []
                         [ Html.li
-                            []
+                            [ class "has-border-3"
+                            ]
                             [ Html.a
                                 [ State.href About
                                 ]
@@ -33,7 +34,8 @@ view =
                                 ]
                             ]
                         , Html.li
-                            []
+                            [ class "has-border-3"
+                            ]
                             [ Html.a
                                 [ State.href (Cal Year.init MonthOfYear.init)
                                 ]
