@@ -15,6 +15,7 @@ import View.About.About
 import View.Cal.Cal
 import View.Cal.Day
 import View.Error.Error
+import View.Playlists.Playlists
 
 
 main : Program () Model Msg
@@ -104,6 +105,9 @@ view model =
 
                 Error error ->
                     View.Error.Error.view error
+
+                Playlists ->
+                    View.Playlists.Playlists.view
     in
     { title = "the.tap.in"
     , body =
