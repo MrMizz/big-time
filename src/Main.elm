@@ -59,6 +59,9 @@ update msg model =
         ResetViewport ->
             ( model, resetViewport )
 
+        ClickedPlaylistDescription playlists ->
+            ( { model | playlists = playlists }, Cmd.none )
+
 
 
 -- VIEW
@@ -107,7 +110,7 @@ view model =
                     View.Error.Error.view error
 
                 Playlists ->
-                    View.Playlists.Playlists.view
+                    View.Playlists.Playlists.view model.playlists
     in
     { title = "the.tap.in"
     , body =
