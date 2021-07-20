@@ -61,7 +61,6 @@ body {
 .pop {
   position: relative;
   background-color: #eef3fc;
-  z-index: 201;
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -103,5 +102,4 @@ $family-secondary: "Anton", BlinkMacSystemFont, -apple-system, "Helvetica", "Ari
   content: "";
   height: 100%;
   width: 100%;
-  z-index: -201;
 }
