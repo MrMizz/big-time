@@ -54,12 +54,14 @@ body playlists =
         open : Update -> Playlist -> Html Msg
         open f playlist =
             Html.button
-                [ style "width" "100%"
+                [ class "button is-inverted is-small pop"
+                , style "width" "100%"
                 , height 50
                 , onClick (ClickedPlaylistDescription (f playlists { playlist | descriptionIsOpen = True }))
                 ]
                 [ Html.div
-                    []
+                    [ class "has-text-link"
+                    ]
                     [ Html.text "<desc press for </desc>"
                     ]
                 ]
