@@ -49,7 +49,7 @@ init =
                     made a lot of noise in the "jazz world". Released by Giles Peterson with his Brownswood Recordings.
                     Although you can argue they took a lot of influence from Tenderlonious.
                     They were all working together for years in the underground UK scene
-                    (specifically with Rhythm Section https://wearerhythmsection.bandcamp.com/) before this 2017 release.
+                    (specifically with Rhythm Section) before this 2017 release.
                     """
 
                 five =
