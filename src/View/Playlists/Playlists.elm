@@ -36,12 +36,12 @@ body playlists =
                     ]
                     []
                 , Html.div
-                    [ class "modal-content"
+                    [ class "modal-content px-4"
                     ]
                     [ Html.div
                         [ class "container has-text-centered is-family-secondary"
                         ]
-                        (List.map (\txt -> Html.div [ class "my-5" ] [ Html.text txt ]) playlist.description)
+                        (List.map (\txt -> Html.div [ class "my-5" ] [ Html.text (String.toUpper txt) ]) playlist.description)
                     ]
                 , Html.button
                     [ class "modal-close"
