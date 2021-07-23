@@ -159,11 +159,110 @@ init =
             ]
 
         valle =
-            """
-            valle
-            """
+            let
+                one =
+                    """
+                    Tribute to Marcos Valle
+                    """
+
+                two =
+                    """
+                    1963. Marcos with a Bossa Nova release, per the times.
+                    You can hear that Marcos is clearly emulating the likes of Antonio Carlos Jobim.
+                    This record certainly hits the mark that he must have been striving for & it puts him on the map.
+                    """
+
+                three =
+                    """
+                    1972. Nearly 10 years later. Marcos is jamming with Azymuth, legendary Brazilian funk/acid band.
+                    The grooves are still very much Bossa Nova, but they take a new flavor with the introduction of synthesizers.
+                    A personal favorite record of mine.
+                    """
+
+                four =
+                    """
+                    1981. Nearly 10 years later, again. There's a reason for these hiatuses with Marcos.
+                    Brasil was not an easy place to be. Military Dictatorship. Government censorship.
+                    Anyways, Marcos is in the USA & working with Leon Ware (producer of Marvin Gaye).
+                    They release (at least) two albums together.
+                    One under Marcos' name, another (more traditionally American) under Leon's name.
+                    This record has got American funk & jazz influences all over it,
+                    as most evident in the drums that are no longer Samba.
+                    """
+
+                five =
+                    """
+                    1983. Self titled album. Infamous album cover. The single Estrelar blows up.
+                    People are still listening to that track. As far as Marcos Valle records go,
+                    this is probably my least favorite. There's 2 or 3 good tracks.
+                    Included on this record is a rendition of Samba de Verao, the bossa nova standard written
+                    by Marcos & his brother. He performs this track in 1983, this time with a funky spin.
+                    """
+
+                six =
+                    """
+                    1986. Yet another ridiculous album cover.
+                    Marcos does Samba de Verao again. This time with deep 80s chords & drum machines.
+                    I much prefer this album to the 1983 release.
+                    """
+
+                seven =
+                    """
+                    2001. 15 years later. Marcos finally produces a sensible album cover.
+                    This record, titled "Escape", is released by Far Out Recordings.
+                    A group from the UK who at this time began producing/signing exclusively artists from Brasil.
+                    Far Out also really likes electronic & dance music.
+                    Pair that with an artist like Marcos Valle,
+                    who has already ventured from the constraints of Samba & Bossa. Oh man.
+                    """
+
+                eight =
+                    """
+                    2004. Contrasts. Another release with Far Out.
+                    At this point Marcos Valle has solidified himself as one of the most dynamic musicians of all time.
+                    Between 1963 and 2004. He's still producing incredible samba grooves, yet it's fresh and interesting.
+                    Might be my favorite Valle album, ever.
+                    """
+
+                nine =
+                    """
+                    2010. Estatica. Another release with Far Out. Fantastic record.
+                    """
+
+                ten =
+                    """
+                    2019. Nearly 10 years later. Again. This time the record is titled "Sempre". Released by Far Out.
+                    This was the best record of 2019. I'm serious. & it came from an artist who debuted in 1963.
+                    Explain me that.
+                    """
+
+                eleven =
+                    """
+                    I'm not aware of another artist who has had this sort of longevity.
+                    Artists like Miles Davis come to mind.
+                    """
+
+                twelve =
+                    """
+                    I'm still waiting for the next Valle record. I hope it's with Far Out.
+                    Until then, we can listen back to 60+ years of greatness.
+                    """
+            in
+            [ one
+            , two
+            , three
+            , four
+            , five
+            , six
+            , seven
+            , eight
+            , nine
+            , ten
+            , eleven
+            , twelve
+            ]
     in
     { thatNewJazz = Playlist False thatNewJazz
     , tender = Playlist False tender
-    , valle = Playlist False []
+    , valle = Playlist False valle
     }
