@@ -94,9 +94,69 @@ init =
             ]
 
         tender =
-            """
-            tender
-            """
+            let
+                one =
+                    """
+                    Tribute to Ed Cawthorne (aka Tenderlonious)
+                    """
+
+                two =
+                    """
+                    There's really a ton to say about this guy.
+                    & we've already covered him briefly in our "THAT NEW JAZZ S***" bit.
+                    """
+
+                three =
+                    """
+                    Tenderlonious is a really important figure in the modern artistic world. Really.
+                    Why? How? Ed Cawthorne owns all his music. He is his own "label head".
+                    He's "independent" in industry terms. & it's intentional.
+                    It's not like he's waiting for some record label to swoop him up. Quite the opposite.
+                    """
+
+                four =
+                    """
+                    No. Tenderlonious is out here, doing it his way. & I think he's figured it out.
+                    The strategy looks a lot like the following.
+                    """
+
+                five =
+                    """
+                    Release often.
+                    Tender seems to be releasing every other month.
+                    & it's usually an EP, not a single like the rest of the industry.
+                    Most artists today are afraid to publish work, sitting on an entire archives.
+                    It seems that Tenderlonious is releasing most of what he produces, and more importantly, sells it.
+                    """
+
+                six =
+                    """
+                    Release exclusively.
+                    All of the releases are pressed on Vinyl. Releases are typically exclusive (limited number of physical copies).
+                    I've even seen this guy release ONLY physical copies. No digital. This type of behavior drives demand.
+                    """
+
+                seven =
+                    """
+                    This model typically does not build a commercial fan base.
+                    But it builds a loyal community of patrons that anticipate & purchase your work.
+                    Which enables more work. More work that is uncompromising. More work that actually means something.
+                    """
+
+                eight =
+                    """
+                    That's exactly what Tenderlonious' music is. Uncompromising. It's meaningful. & it's funky.
+                    """
+            in
+            [ one
+            , two
+            , three
+            , four
+            , five
+            , six
+            , seven
+            , eight
+            ]
 
         valle =
             """
@@ -104,6 +164,6 @@ init =
             """
     in
     { thatNewJazz = Playlist False thatNewJazz
-    , tender = Playlist False []
+    , tender = Playlist False tender
     , valle = Playlist False []
     }
