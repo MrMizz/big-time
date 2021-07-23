@@ -112,9 +112,9 @@ body playlists =
             Html.div
                 [ class "columns is-multiline"
                 ]
-                [ one
-                , two
+                [ two
                 , three
+                , one
                 ]
     in
     Html.div
