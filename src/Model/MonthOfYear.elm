@@ -18,7 +18,7 @@ type MonthOfYear
 
 init : MonthOfYear
 init =
-    Jul
+    Jun
 
 
 next : MonthOfYear -> MonthOfYear
