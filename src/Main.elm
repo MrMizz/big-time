@@ -16,6 +16,7 @@ import View.Cal.Cal
 import View.Cal.Day
 import View.Error.Error
 import View.Playlists.Playlists
+import View.Resume.Resume
 
 
 main : Program () Model Msg
@@ -111,6 +112,9 @@ view model =
 
                 Playlists ->
                     View.Playlists.Playlists.view model.playlists
+
+                Resume ->
+                    View.Resume.Resume.view
     in
     { title = "the.tap.in"
     , body =

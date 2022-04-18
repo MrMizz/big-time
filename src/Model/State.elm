@@ -15,6 +15,7 @@ type State
     | Day Year MonthOfYear Int
     | Error String
     | Playlists
+    | Resume
 
 
 urlParser : UrlParser.Parser (State -> c) c
@@ -26,6 +27,7 @@ urlParser =
         , UrlParser.map Day (yearParser </> monthParser </> UrlParser.int)
         , UrlParser.map About (UrlParser.s "about")
         , UrlParser.map Playlists (UrlParser.s "playlists")
+        , UrlParser.map Resume (UrlParser.s "resume")
         ]
 
 
@@ -73,6 +75,9 @@ path state =
 
         Playlists ->
             "#/playlists"
+
+        Resume ->
+            "#/resume"
 
 
 href : State -> Html.Attribute msg
